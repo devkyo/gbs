@@ -1,0 +1,205 @@
+@font-face {
+  font-family: 'lg-b';
+  font-style: normal;
+  font-weight: 400;
+  src: local('lg-b'), local('lg-b'), url("../fuentes/lg-b.woff") format('woff'), url("../fuentes/lg-b.woff2") format('woff2');
+}
+@font-face {
+  font-family: 'lg-bi';
+  font-style: normal;
+  font-weight: 400;
+  src: local('lg-bi'), local('lg-bi'), url("../fuentes/lg-bi.woff") format('woff'), url("../fuentes/lg-bi.woff2") format('woff2');
+}
+@font-face {
+  font-family: 'lg-l';
+  font-style: normal;
+  font-weight: 400;
+  src: local('lg-l'), local('lg-l'), url("../fuentes/lg-l.woff") format('woff'), url("../fuentes/lg-l.woff2") format('woff2');
+}
+@font-face {
+  font-family: 'lg-r';
+  font-style: normal;
+  font-weight: 400;
+  src: local('lg-r'), local('lg-r'), url("../fuentes/lg-r.woff") format('woff'), url("../fuentes/lg-r.woff2") format('woff2');
+}
+@font-face {
+  font-family: 'lg-ri';
+  font-style: normal;
+  font-weight: 400;
+  src: local('lg-ri'), local('lg-ri'), url("../fuentes/lg-ri.woff") format('woff'), url("../fuentes/lg-ri.woff2") format('woff2');
+}
+@font-face {
+  font-family: 'lg-sm';
+  font-style: normal;
+  font-weight: 400;
+  src: local('lg-sm'), local('lg-sm'), url("../fuentes/lg-sm.woff") format('woff'), url("../fuentes/lg-sm.woff2") format('woff2');
+}
+
+
+
+
+
+// other 
+
+
+// @font-face {
+//   font-family: 'LG Smart';
+//   src: url('../fonts/lg-b.woff2') format('woff2'),
+//       url('../fonts/lg-b.woff') format('woff');
+//   font-weight: bold;
+//   font-style: italic;
+//   font-display: swap;
+// }
+
+// @font-face {
+//   font-family: 'LG Smart';
+//   src: url('../fonts/other/LGSmart-BoldItalic.woff2') format('woff2'),
+//       url('../fonts/other/LGSmart-BoldItalic.woff') format('woff');
+//   font-weight: bold;
+//   font-style: italic;
+//   font-display: swap;
+// }
+
+// @font-face {
+//   font-family: 'LG Smart';
+//   src: url('../fonts/other/LGSmart-Bold.woff2') format('woff2'),
+//       url('../fonts/other/LGSmart-Bold.woff') format('woff');
+//   font-weight: bold;
+//   font-style: italic;
+//   font-display: swap;
+// }
+
+// @font-face {
+//   font-family: 'LG Smart';
+//   src: url('../fonts/other/LGSmart-BoldItalic.woff2') format('woff2'),
+//       url('../fonts/other/LGSmart-BoldItalic.woff') format('woff');
+//   font-weight: bold;
+//   font-style: italic;
+//   font-display: swap;
+// }
+
+// @font-face {
+//   font-family: 'LG Smart';
+//   src: url('../fonts/other/LGSmart-BoldItalic.woff2') format('woff2'),
+//       url('../fonts/other/LGSmart-BoldItalic.woff') format('woff');
+//   font-weight: bold;
+//   font-style: italic;
+//   font-display: swap;
+// }
+
+// @font-face {
+//   font-family: 'LG Smart';
+//   src: url('../fonts/other/LGSmart-Bold.woff2') format('woff2'),
+//       url('../fonts/other/LGSmart-Bold.woff') format('woff');
+//   font-weight: bold;
+//   font-style: italic;
+//   font-display: swap;
+// }
+
+// @font-face {
+//   font-family: 'LG Smart';
+//   src: url('../fonts/other/LGSmartLight-SemiBold.woff2') format('woff2'),
+//       url('../fonts/other/LGSmartLight-SemiBold.woff') format('woff');
+//   font-weight: 300;
+//   font-style: italic;
+//   font-display: swap;
+// }
+
+// @font-face {
+//   font-family: 'LG Smart';
+//   src: url('../fonts/other/LGSmartLight-Light.woff2') format('woff2'),
+//       url('../fonts/other/LGSmartLight-Light.woff') format('woff');
+//   font-weight: 300;
+//   font-style: italic;
+//   font-display: swap;
+// }
+
+// @font-face {
+//   font-family: 'LG Smart';
+//   src: url('../fonts/other/LGSmart-Italic.woff2') format('woff2'),
+//       url('../fonts/other/LGSmart-Italic.woff') format('woff');
+//   font-weight: normal;
+//   font-style: italic;
+//   font-display: swap;
+// }
+
+// @font-face {
+//   font-family: 'LG Smart';
+//   src: url('../fonts/other/SmartLight-Light.woff2') format('woff2'),
+//       url('../fonts/other/LGSmartLight-Light.woff') format('woff');
+//   font-weight: 300;
+//   font-style: italic;
+//   font-display: swap;
+// }
+
+// @font-face {
+//   font-family: 'LG Smart';
+//   src: url('../fonts/other/LGSmart.woff2') format('woff2'),
+//       url('../fonts/other/LGSmart.woff') format('woff');
+//   font-weight: normal;
+//   font-style: italic;
+//   font-display: swap;
+// }
+
+// @font-face {
+//   font-family: 'LG Smart';
+//   src: url('../fontsother/LGSmart.woff2') format('woff2'),
+//       url('../fonts/other/LGSmart.woff') format('woff');
+//   font-weight: normal;
+//   font-style: italic;
+//   font-display: swap;
+// }
+
+// @font-face {
+//   font-family: 'LG Smart';
+//   src: url('../fonts/other/LGSmartLight-Light.woff2') format('woff2'),
+//       url('../fonts/other/LGSmartLight-Light.woff') format('woff');
+//   font-weight: 300;
+//   font-style: italic;
+//   font-display: swap;
+// }
+
+// @font-face {
+//   font-family: 'LG Smart';
+//   src: url('../fonts/other/LGSmartLight-SemiBold.woff2') format('woff2'),
+//       url('../fonts/other/LGSmartLight-SemiBold.woff') format('woff');
+//   font-weight: 300;
+//   font-style: italic;
+//   font-display: swap;
+// }
+
+// @font-face {
+//   font-family: 'LG Smart';
+//   src: url('../fonts/other/LGSmart-Italic.woff2') format('woff2'),
+//       url('../fonts/other/LGSmart-Italic.woff') format('woff');
+//   font-weight: normal;
+//   font-style: italic;
+//   font-display: swap;
+// }
+
+// @font-face {
+//   font-family: 'LG Smart';
+//   src: url('../fonts/other/LGSmart-Italic.woff2') format('woff2'),
+//       url('../fonts/other/LGSmart-Italic.woff') format('woff');
+//   font-weight: normal;
+//   font-style: italic;
+//   font-display: swap;
+// }
+
+// @font-face {
+//   font-family: 'LG Smart';
+//   src: url('../fonts/other/LGSmartLight-SemiBold.woff2') format('woff2'),
+//       url('../fonts/other/LGSmartLight-SemiBold.woff') format('woff');
+//   font-weight: 300;
+//   font-style: italic;
+//   font-display: swap;
+// }
+
+// @font-face {
+//   font-family: 'LG Smart';
+//   src: url('../fonts/other/LGSmart.woff2') format('woff2'),
+//       url('../fonts/other/LGSmart.woff') format('woff');
+//   font-weight: normal;
+//   font-style: italic;
+//   font-display: swap;
+// }
