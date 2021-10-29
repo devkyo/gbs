@@ -1,0 +1,32 @@
+.contact {
+  &__content {
+    padding: 6rem 0 14rem 0;
+  }
+  &__title {
+    font-size: 34px;
+    font-weight: 700;
+    color: $primary-color;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
+  p {
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  &__form {
+    background: #EBECF1;
+  }
+  &__map {
+    transform: translateY(-165px);
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 0 auto;
+    iframe {
+      margin: 0 auto;
+      border-radius: 20px;
+    }
+  }
+}

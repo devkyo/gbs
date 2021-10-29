@@ -2066,6 +2066,8 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js"); // import
 
 
 console.log('ready front');
+var myCarousel = document.querySelector('#sliderHome');
+var carousel = new bootstrap.Carousel(myCarousel);
 
 /***/ }),
 

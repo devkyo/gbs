@@ -19,7 +19,7 @@ class HomeController extends Controller
 
 
 
-        return view('layouts.frontend');
+        return view('admin.index');
 
     }
 

@@ -58,4 +58,15 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+
+
+    public function slider()
+    {
+        return $this->belongsTo('App\Models\Slider');
+    }
+
+   
+
+
 }
