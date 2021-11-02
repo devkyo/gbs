@@ -8,3 +8,6 @@ require('./bootstrap');
 
 
 console.log('ready front');
+
+var myCarousel = document.querySelector('#sliderHome')
+var carousel = new bootstrap.Carousel(myCarousel)

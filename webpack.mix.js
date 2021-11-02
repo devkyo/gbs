@@ -18,6 +18,8 @@ mix.js('resources/js/app.js', 'public/js')
     ])
     .sass('resources/sass/main.scss','public/css');
 
+
+
 if (mix.inProduction()) {
     mix.version();
 }

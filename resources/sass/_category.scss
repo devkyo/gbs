@@ -1,0 +1,16 @@
+.category {
+  background: #EBECF1;
+  padding: 2rem 0;
+
+  &__back {
+    padding: 2rem 0;
+    a {
+      background: $primary-color;
+      color: #fff;
+      font-weight: 600;
+      padding: .4rem 2rem;
+      border-radius: 20px;
+      text-decoration: none;
+    }
+  }
+}

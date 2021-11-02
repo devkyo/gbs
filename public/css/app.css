@@ -1173,6 +1173,15 @@ select {
 .mb-4 {
 	margin-bottom: 1rem;
 }
+.mr-1 {
+	margin-right: 0.25rem;
+}
+.-mt-px {
+	margin-top: -1px;
+}
+.ml-auto {
+	margin-left: auto;
+}
 .block {
 	display: block;
 }

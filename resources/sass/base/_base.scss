@@ -1,0 +1,24 @@
+body {
+  background: #fff;
+  color: #000;
+  font-family: 'Montserrat', sans-serif!important;
+}
+
+
+
+@mixin responsive ($breakpoint) {
+
+
+  @if $breakpoint==laptop {
+      
+  @media only screen and (max-width: 1024px) {
+    @content;
+    }
+  }
+
+  @if $breakpoint==mobile {
+    @media only screen and (max-width: 768px) {
+      @content;
+    }
+  }
+}

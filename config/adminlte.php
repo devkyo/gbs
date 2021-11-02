@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 3',
+    'title' => 'GBS',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -45,12 +45,12 @@ return [
     |
     */
 
-    'logo' => '<b>LG Lavadora</b>',
-    // 'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
-    'logo_img_class' => 'brand-image img-circle elevation-3',
+    'logo' => '<b>Panel</b>',
+    'logo_img' => '/images/logo_footer.png',
+    'logo_img_class' => 'brand-image ',
     'logo_img_xl' => null,
-    'logo_img_xl_class' => 'brand-image-xs',
-    'logo_img_alt' => 'LG Lavadora',
+    // 'logo_img_xl_class' => 'brand-image-xs',
+    'logo_img_alt' => 'GBS',
 
     /*
     |--------------------------------------------------------------------------
@@ -235,22 +235,32 @@ return [
             'type'         => 'fullscreen-widget',
             'topnav_right' => true,
         ],
-
+        [
+          'text' => 'Dashboard',
+          'route'  => 'admin.index',
+          // 'can'  => 'manage-blog',
+          ],
         // Sidebar items:
         // [
         //     'type' => 'sidebar-menu-search',
         //     'text' => 'search',
         // ],
-        // [
-        //     'text' => 'blog',
-        //     'url'  => 'admin/blog',
-        //     'can'  => 'manage-blog',
-        // ],
-         [
-                'text' => 'Participantes',
-                'route'  => 'admin.index',
-                // 'can'  => 'manage-blog',
+          ['header' => 'SLIDER'],
+          [
+            'text' => 'Sliders',
+            'route'  => 'admin.sliders.index',
+            // 'url' =>  'admin/sliders'
+            // 'can'  => 'admin/slider/index',
             ],
+         
+          ['header' => 'NOTICIAS'],
+          [
+            'text' => 'blog',
+            'route'  => 'admin.blog.index',
+            'icon' =>  'fas fa-fw fa-pencil-alt'
+            // 'can'  => 'manage-blog',
+         ],
+
         // [
         //     'text'        => 'pages',
         //     'url'         => 'admin/pages',
@@ -269,45 +279,127 @@ return [
         //     'url'  => 'admin/settings',
         //     'icon' => 'fas fa-fw fa-lock',
         // ],
+        ['header' => 'PRODUCTOS'],
+        [
+          'text' => 'Categorias',
+          'icon'    => 'fas fa-fw fa-clipboard-check',
+          'route'  => 'admin.categories.index',
+        //   'url' =>  '/admin/rol'
+          // 'can'  => 'manage-blog',
+          ],
+        [
+        'text' => 'Colores',
+        'icon'    => 'fas fa-swatchbook',
+        //   'url' =>  '/admin/rol',
+        'route'  => 'admin.colors.index',
+        // 'can'  => 'manage-blog',
+        ],
+        [
+            'text' => 'Productos',
+            'icon'    => 'fas fa-fw fa-archive',
+            //   'url' =>  '/admin/rol',
+            'route'  => 'admin.products.index',
+            // 'can'  => 'manage-blog',
+            ],
+
+        ['header' => 'REGISTRO'],
+          [
+            'text' => ' Contacto',
+            'url'  => 'admin/bldog',
+            // 'route' =>  'admin.contacto.index',
+            'icon' =>  'fas fa-newspaper'
+            // 'can'  => 'manage-blog',
+         ],
+         [
+          'text' => 'Newsletter',
+          'url'  => 'admin/blodg',
+            // 'route' =>  'admin.newsletter.index',
+          'icon' =>  'fas fa-file-alt'
+          // 'can'  => 'manage-blog',
+       ],
+
+
         // [
-        //     'text'    => 'multilevel',
-        //     'icon'    => 'fas fa-fw fa-share',
+        //   'text'    => 'Categorias',
+          
+        //   'icon'    => 'fas fa-fw fa-clipboard-check',
+        //   'submenu' => [
+        //       [
+        //           'text' => 'Ver todos',
+        //           'url'  => '#',
+        //       ],
+        //       [
+        //         'text' => 'Agregar producto',
+        //         'url'  => '#',
+        //       ],
+        //       // [
+        //       //     'text'    => 'level_one',
+        //       //     'url'     => '#',
+        //       //     'submenu' => [
+        //       //         [
+        //       //             'text' => 'level_two',
+        //       //             'url'  => '#',
+        //       //         ],
+        //       //         [
+        //       //             'text'    => 'level_two',
+        //       //             'url'     => '#',
+        //       //             'submenu' => [
+        //       //                 [
+        //       //                     'text' => 'level_three',
+        //       //                     'url'  => '#',
+        //       //                 ],
+        //       //                 [
+        //       //                     'text' => 'level_three',
+        //       //                     'url'  => '#',
+        //       //                 ],
+        //       //             ],
+        //       //         ],
+        //       //     ],
+        //       // ],
+             
+        //   ],
+        // ],
+        // [
+        //     'text'    => 'Productos',
+        //     'icon'    => 'fas fa-fw fa-archive',
         //     'submenu' => [
         //         [
-        //             'text' => 'level_one',
+        //             'text' => 'Ver todos',
         //             'url'  => '#',
         //         ],
         //         [
-        //             'text'    => 'level_one',
-        //             'url'     => '#',
-        //             'submenu' => [
-        //                 [
-        //                     'text' => 'level_two',
-        //                     'url'  => '#',
-        //                 ],
-        //                 [
-        //                     'text'    => 'level_two',
-        //                     'url'     => '#',
-        //                     'submenu' => [
-        //                         [
-        //                             'text' => 'level_three',
-        //                             'url'  => '#',
-        //                         ],
-        //                         [
-        //                             'text' => 'level_three',
-        //                             'url'  => '#',
-        //                         ],
-        //                     ],
-        //                 ],
-        //             ],
+        //           'text' => 'Agregar producto',
+        //           'url'  => '#',
         //         ],
-        //         [
-        //             'text' => 'level_one',
-        //             'url'  => '#',
-        //         ],
+        //         // [
+        //         //     'text'    => 'level_one',
+        //         //     'url'     => '#',
+        //         //     'submenu' => [
+        //         //         [
+        //         //             'text' => 'level_two',
+        //         //             'url'  => '#',
+        //         //         ],
+        //         //         [
+        //         //             'text'    => 'level_two',
+        //         //             'url'     => '#',
+        //         //             'submenu' => [
+        //         //                 [
+        //         //                     'text' => 'level_three',
+        //         //                     'url'  => '#',
+        //         //                 ],
+        //         //                 [
+        //         //                     'text' => 'level_three',
+        //         //                     'url'  => '#',
+        //         //                 ],
+        //         //             ],
+        //         //         ],
+        //         //     ],
+        //         // ],
+               
         //     ],
         // ],
-        // ['header' => 'labels'],
+        
+        // ['header' => 'USUARIOS'],
         // [
         //     'text'       => 'important',
         //     'icon_color' => 'red',

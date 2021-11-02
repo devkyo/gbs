@@ -1,0 +1,275 @@
+.collection {
+  background: #EBECF1;  
+  padding: 2rem 0;
+  a {
+    text-decoration: none;
+    display: block;
+
+    &:nth-child(2n) .collection__box .collection__box-title{
+      background: $secundary-color;
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 20px;
+    padding: 0;
+  }
+ 
+  &__title {
+    text-align: center;
+    margin: 2rem 0;
+    h1{
+      font-size: 24px;
+      font-weight: 700;
+      color: $secundary-color;
+      position: relative;
+      display: inline-block;
+      &:after {
+        content: "";
+        position: absolute;
+        width: 100px;
+        height: 8px;
+        left: -110px;
+        top: 10px;
+        background: url('/images/after-line.png')no-repeat;
+      }
+      &:before {
+        content: "";
+        position: absolute;
+        width: 100px;
+        height: 8px;
+        right: -110px;
+        top: 10px;
+        background: url('/images/after-line.png')no-repeat;
+      }
+    }
+  }
+  
+  &__box {
+    height: 350px;
+    background-size: cover;
+    display: flex;
+  
+    margin: 0;
+    padding: 0;
+    align-items: flex-end;
+    justify-content: center;
+    border-radius: 20px;
+    transition: all .2s;
+    &-title {
+      width: 50%;
+      text-align: center;
+      font-weight: 700;
+      padding: .7rem 0;
+      background: $primary-color;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: #fff;
+      margin: 0;
+      border-radius: 20px 20px 0 0;
+    }
+    &:hover {
+      transform: translateY(-10px);
+    }
+  }
+
+  &__more {
+    display: flex;
+    justify-content: center;
+    a {
+      background: $primary-color;
+      color: #fff;
+      font-weight: 600;
+      text-align: center;
+      padding: .3rem 2rem;
+      border-radius: 20px;
+      margin: 1.4rem 0;
+    }
+  }
+
+  @media only screen and (max-width: 1024px){
+
+    &__content {
+      grid-template-columns: repeat(2,1fr);
+    }
+  }
+
+  @media only screen and (max-width: 768px){
+
+    &__content {
+      grid-template-columns: repeat(1,1fr);
+    }
+  }
+
+}
+
+
+.products {
+  padding: 2rem 0;
+
+  a {
+    text-decoration: none;
+  }
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    
+  }
+  &__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all .2s;
+    &:hover {
+      transform: translateY(-10px);
+    }
+    
+    &-img {
+  
+      border-radius: 20px;
+      overflow: hidden;
+
+      img {
+        width: 255px;
+        height: 220px;
+        object-fit: cover;
+        object-position: center;
+        // width: 100%;
+      }
+    }
+    &-title {
+      h5 {
+        font-size: 14px;
+        font-weight: 700;
+        text-align: center;
+        margin-top: .5rem;
+        color: $secundary-color;
+      }
+      h3 {
+        font-size: 24px;
+        font-weight: 700;
+        text-align: center;
+        color: $secundary-color;
+      }
+    }
+  }
+
+
+  @media only screen and (max-width: 1024px){
+
+    &__content {
+      grid-template-columns: repeat(2,1fr);
+    }
+  }
+
+  @media only screen and (max-width: 768px){
+
+    &__content {
+      grid-template-columns: repeat(1,1fr);
+    }
+  }
+
+
+}
+
+
+.contactsmall {
+  background: #EBECF1;
+  padding: 2rem 0;
+  &__content{
+    display: flex;
+    justify-content: space-around;
+  }
+  &__copy {
+    h3 {
+      font-size: 24px;
+      color: $primary-color;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    ul {
+      color: $secundary-color;
+      padding-left: 1rem;
+      font-size: 18px;
+      font-weight: 500;
+    }
+  }
+
+  &__form {
+    width: 50%;
+   
+    input[type="text"] {
+      border-radius: 15px;
+      width: 100%;
+      border: 1px solid transparent;
+      margin-bottom: .5rem ;
+      padding: .5rem 1rem;
+      font-size: 14px;
+      box-sizing: border-box;
+      &:focus {
+        box-sizing: border-box;
+        outline: none;
+        border:1px solid  $primary-color;
+      }
+    }
+    h3 {
+      font-size: 24px;
+      color: #FE4E50;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    button {
+      padding: .3rem 2rem;
+      color: #fff;
+      font-weight: 700;
+      font-size: 14px;
+      background: $primary-color;
+      border: none;
+      border-radius: 15px;
+    }
+
+
+
+    textarea {
+      width: 100%;
+      border: none;
+      border-radius: 20px;
+      resize: none;
+      padding: 1rem;
+      font-size: 14px;
+      border: 1px solid transparent;
+      &:focus {
+        outline: none;
+        border: 1px solid $primary-color;
+      }
+    }
+  }
+
+  &__buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  @media only screen and (max-width: 1024px){
+
+    &__content {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  @media only screen and (max-width: 768px){
+
+    &__content {
+      grid-template-columns: repeat(1,1fr);
+    }
+    &__form {
+      width: 100%!important;
+      input {
+        width: 100%;
+      }
+    }
+  }
+}
