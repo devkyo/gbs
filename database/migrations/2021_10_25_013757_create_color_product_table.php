@@ -22,7 +22,7 @@ class CreateColorProductTable extends Migration
 
             $table->timestamps();
 
-            $table->foreign('product_id')->references('id')->on('users')
+            $table->foreign('product_id')->references('id')->on('products')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
 

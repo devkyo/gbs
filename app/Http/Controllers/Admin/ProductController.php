@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Color;
 use App\Models\Product;
+use App\Models\Slider;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
@@ -20,8 +21,8 @@ class ProductController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {   
-        
+    {
+
         $products = Product::all();
         return view('admin.productos.index', compact('products'));
     }
@@ -35,7 +36,7 @@ class ProductController extends Controller
     {
         $categories = Category::all();
         $colors = Color::all();
-        return view('admin.productos.create', compact('categories','colors'));
+        return view('admin.productos.create', compact('categories', 'colors'));
     }
 
     /**
@@ -52,35 +53,33 @@ class ProductController extends Controller
             // 'image' =>  'required'
         ]);
 
-      
+
         $foto = $request->file('image')->store('public/products');
         $url_img = Storage::url($foto);
-        
-        $product = Product::create([
 
-        'name' => $request->name,
-        'image'  => $url_img,
-        'slug' => Str::slug($request->name,'-'),
-        'code'  => $request->code,
-        'large'  => $request->large,
-        'ancho'  => $request->ancho,
-        'alto'  => $request->alto,
-        'diametro'  => $request->diametro,
-        'capacidad'  => $request->capacidad,
-        'user_id' => Auth::user()->id,
-        'category_id' => $request->category,
-        
+        $product = Product::create([
+            'name' => $request->name,
+            'image'  => $url_img,
+            'slug' => Str::slug($request->name, '-'),
+            'code'  => $request->code,
+            'large'  => $request->large,
+            'ancho'  => $request->ancho,
+            'alto'  => $request->alto,
+            'diametro'  => $request->diametro,
+            'capacidad'  => $request->capacidad,
+            'user_id' => Auth::user()->id,
+            'category_id' => $request->category,
         ]);
-        
+
         $product->save();
-   
-        $product->colors()->attach($request->color);
-        
-     
+
+        $product->colors()->attach($request->colors);
+
+
 
         // return dd($request->colors);
 
-        
+
 
         return redirect()->route('admin.products.index')->with('info', 'Producto agregado correctamente');
     }
@@ -117,25 +116,25 @@ class ProductController extends Controller
     public function update(Request $request, Category $category)
     {
         $request->validate([
-          'name'  =>  'required',
+            'name'  =>  'required',
         ], [
             'name.required' => 'Ingrese un nombre a la categoria'
         ]);
-        
-        
-        if($request->file('image')){
 
-          $foto = $request->file('image')->store('public/category');
-          $url_img = Storage::url($foto);
-          $category->image  = $url_img;
+
+        if ($request->file('image')) {
+
+            $foto = $request->file('image')->store('public/category');
+            $url_img = Storage::url($foto);
+            $category->image  = $url_img;
         }
 
         $category->name = $request->name;
-        $category->slug = Str::slug($request->name,'-');
+        $category->slug = Str::slug($request->name, '-');
         $category->user_id = Auth::user()->id;
         $category->save();
 
-      
+
 
         return redirect()->route('admin.categories.index')->with('info', 'Imagen actualizada correctamente');
     }
@@ -148,7 +147,7 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
-      $product->delete();
-      return redirect()->back()->with('info', 'El producto fue eliminado con éxito');
+        $product->delete();
+        return redirect()->back()->with('info', 'El producto fue eliminado con éxito');
     }
 }

@@ -22,12 +22,6 @@ class CreateContactsTable extends Migration
             $table->string('email');
             $table->string('telefono');
             $table->string('consulta');
-            $table->bigInteger('user_id')->unsigned();
-
-            $table->foreign('user_id')->references('id')->on('users')
-            ->onDelete('cascade')
-            ->onUpdate('cascade');
-
 
             $table->timestamps();
         });

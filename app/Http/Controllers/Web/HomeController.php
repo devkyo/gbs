@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
+use App\Models\Product;
 use App\Models\Slider;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -23,7 +24,8 @@ class HomeController extends Controller
     }
 
     public function productos(){
-        return view('frontend.productos');
+        $productos = Product::all();
+        return view('frontend.productos', compact('productos'));
     }
     public function nosotros(){
         return view('frontend.nosotros');

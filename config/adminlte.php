@@ -305,14 +305,14 @@ return [
         ['header' => 'REGISTRO'],
           [
             'text' => ' Contacto',
-            'url'  => 'admin/bldog',
+            'url'  => 'admin/contact',
             // 'route' =>  'admin.contacto.index',
             'icon' =>  'fas fa-newspaper'
             // 'can'  => 'manage-blog',
          ],
          [
           'text' => 'Newsletter',
-          'url'  => 'admin/blodg',
+          'url'  => 'admin/newsletter',
             // 'route' =>  'admin.newsletter.index',
           'icon' =>  'fas fa-file-alt'
           // 'can'  => 'manage-blog',

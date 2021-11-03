@@ -46,7 +46,8 @@
               <p><strong>NEWSLETTER</strong> > Suscríbete y recibe información sobre todas nuestras novedades.</p>
           </div>
 
-          <form action="" class="newsletter__form">
+          <form action="{{ route('admin.newsletter.store') }}" class="newsletter__form" method="POST">
+            @csrf 
               <input type="text" name="email" placeholder="Introducir email">
               <button type="submit">Suscribirse</button>
 

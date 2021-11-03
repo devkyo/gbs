@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use App\Models\Newsletter;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,8 @@ class NewsletterController extends Controller
      */
     public function index()
     {
-        //
+        $newsletters = Newsletter::all();
+        return view('admin.newsletter.index', compact('newsletters'));
     }
 
     /**
@@ -35,16 +37,22 @@ class NewsletterController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $newsletter = new Newsletter();
+
+        $newsletter->email = $request->email;
+       
+        $newsletter->save();
+
+        return  redirect()->back()->with('info', 'Nos contactaremos pronto');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Newsletter  $newsletter
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Newsletter $newsletter)
+    public function show($id)
     {
         //
     }
@@ -52,10 +60,10 @@ class NewsletterController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Newsletter  $newsletter
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Newsletter $newsletter)
+    public function edit($id)
     {
         //
     }
@@ -64,10 +72,10 @@ class NewsletterController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Newsletter  $newsletter
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Newsletter $newsletter)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -75,10 +83,10 @@ class NewsletterController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Newsletter  $newsletter
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Newsletter $newsletter)
+    public function destroy($id)
     {
         //
     }

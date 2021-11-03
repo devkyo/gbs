@@ -5,6 +5,8 @@ use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\ColorController;
+use App\Http\Controllers\Admin\ContactController;
+use App\Http\Controllers\Admin\NewsletterController;
 use App\Http\Controllers\Admin\PostController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -25,6 +27,8 @@ Route::middleware('web')->resource('products', ProductController::class)->names(
 Route::middleware('web')->resource('colors', ColorController::class)->names('admin.colors');
 
 Route::middleware('web')->resource('blog', PostController::class)->names('admin.blog');
+Route::middleware('web')->resource('contact', ContactController::class)->names('admin.contact');
+Route::middleware('web')->resource('newsletter', NewsletterController::class)->names('admin.newsletter');
 
 // Route::middleware('web')->resource('sliders', SliderController::class)->names('admin.sliders');
 // Route::middleware('web')->resource('convocatorias', ConvocatoriaController::class)->names('admin.convocatorias');

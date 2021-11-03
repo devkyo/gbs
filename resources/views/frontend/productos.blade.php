@@ -129,24 +129,25 @@
         </ul>
       </div>
 
-      <form action="/formcontact" class="contactsmall__form">
+      <form action="{{ route('admin.contact.store') }}" class="contactsmall__form" method="POST">
+        @csrf
         <div class="row">
           <div class="col">
-            <input type="text" placeholder="Nombres">
+            <input type="text" placeholder="Nombres" name="name">
           </div>
           <div class="col">
-            <input type="text" placeholder="Apellidos">
+            <input type="text" placeholder="Apellidos" name="apellidos">
           </div>
         </div>
         <div class="row">
           <div class="col">
-            <input type="text" placeholder="Introducir email">
+            <input type="text" placeholder="Introducir email" name="email">
           </div>
           <div class="col">
-            <input type="text" placeholder="Teléfonos">
+            <input type="text" placeholder="Teléfonos" name="telefono">
           </div>
         </div>
-        <input type="text" placeholder="Consulta" style="width: 100%;">
+        <input type="text" placeholder="Consulta" style="width: 100%;" name="consulta">
 
         <div class="row">
           <div class="col">
